@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Shajil Khan, étudiant en BTS SIO SISR, à la recherche d'une alternance en technique / support IT.">
+    <title>Shajil Khan - Portfolio</title>
+    <style>
+        /* Styles généraux */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #2573a7; /* plus foncé : meilleur contraste sur fond blanc */
+            --accent-hover: #3498db;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --muted-color: #5f6b6d;     /* remplace #7f8c8d (contraste insuffisant) */
+            --tag-bg: #e1f0fa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { transition: none !important; }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--primary-color);
+            padding: 12px 10px;
+            display: flex;
+            flex-wrap: wrap;            /* évite le débordement sur mobile */
+            justify-content: center;
+            gap: 6px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: #7fc4f0;
+        }
+
+        /* En-tête */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 120px 20px 60px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin: 0 0 10px;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #d5dbdf;
+            margin: 0;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Conteneur principal */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            scroll-margin-top: 80px;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        /* Mots-clés / Tags */
+        .tag {
+            display: inline-block;
+            background-color: var(--tag-bg);
+            color: var(--secondary-color);
+            padding: 5px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin: 5px 5px 5px 0;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        a.tag:hover,
+        a.tag:focus-visible {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item h4 {
+            margin: 0 0 5px;
+            color: var(--primary-color);
+        }
+
+        .item .date {
+            font-style: italic;
+            color: var(--muted-color);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a.external-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a.external-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header { padding-top: 140px; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <nav aria-label="Navigation principale">
+        <a href="#profil">Profil</a>
+        <a href="#formation">Formation &amp; IT</a>
+        <a href="#experiences">Expériences</a>
+        <a href="#competences">Compétences</a>
+        <a href="#passions">Passions</a>
+    </nav>
+
+    <!-- En-tête -->
+    <header>
+        <h1>SHAJIL KHAN</h1>
+        <h2>Technicien Informatique - Support IT (Alternance)</h2>
+        <div class="contact-info">
+            <span aria-hidden="true">📍</span> Avon, Île-de-France |
+            <span aria-hidden="true">📞</span> <a href="tel:+33695805903">06 95 80 59 03</a> |
+            <span aria-hidden="true">✉️</span> <a href="mailto:shajilkhan106@gmail.com">shajilkhan106@gmail.com</a>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="container">
+
+        <!-- Profil -->
+        <section id="profil">
+            <h3><span aria-hidden="true">👤</span> Profil Professionnel</h3>
+            <p>Étudiant en BTS SIO SISR passionné par les réseaux, l'électronique et la sécurité des infrastructures. Fort d'une expérience pratique réussie en câblage réseau filaire et en maintenance d'équipements informatiques, je recherche une alternance de technicien alarme incendie pour mettre ma rigueur et mes compétences techniques au service de vos installations.</p>
+            <div>
+                <a href="#competences" class="tag">#Réseaux</a>
+                <a href="#competences" class="tag">#Électronique</a>
+                <a href="#competences" class="tag">#SécuritéDesInfrastructures</a>
+                <a href="#competences" class="tag">#AlarmeIncendie</a>
+            </div>
+        </section>
+
+        <!-- Formation -->
+        <section id="formation">
+            <h3><span aria-hidden="true">🎓</span> Formation &amp; Informatique</h3>
+
+            <div class="item">
+                <h4>BTS SIO SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</h4>
+                <div class="date"><a href="https://www.utec77.fr/" target="_blank" rel="noopener noreferrer" class="external-link">UTEC-Melun</a> | 2025 - 2027 (en cours)</div>
+                <p><strong>Catégorie Informatique :</strong> Administration des réseaux IP, sécurisation des équipements d'infrastructure et support technique.</p>
+                <a href="https://www.utec77.fr/" target="_blank" rel="noopener noreferrer" class="tag"><span aria-hidden="true">🌐</span> Visiter le site de l'UTEC</a>
+            </div>
+
+            <div class="item">
+                <h4>Bac Professionnel CIEL (Cybersécurité, Informatique et Réseaux, Électronique)</h4>
+                <div class="date">Lycée La Fayette - Champagne-sur-Seine | Mention Assez Bien</div>
+                <p>Systèmes numériques, bases de l'électronique appliquée, câblage réseau et diagnostic matériel.</p>
+            </div>
+        </section>
+
+        <!-- Expériences -->
+        <section id="experiences">
+            <h3><span aria-hidden="true">💼</span> Expériences Professionnelles</h3>
+
+            <div class="item">
+                <h4>Stagiaire Technicien Réseau &amp; Câblage Filaires</h4>
+                <div class="date">LAFON.exe - Paris | Fév. 2025 - Avr. 2025</div>
+                <ul>
+                    <li><strong>Mission :</strong> Participation au déploiement de l'infrastructure réseau et du câblage sur un chantier d'aménagement professionnel, configuration de serveurs PHP.</li>
+                    <li><strong>Actions :</strong> Réalisation du tirage de câbles, sertissage RJ-45, raccordement sur baies de brassage et installation physique de serveurs et de postes.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h4>Stagiaire Technicien Maintenance &amp; Support Informatique</h4>
+                <div class="date">CMBM (Centre Multimédia Butte Montceau) - Avon | Janv. 2024 - Juin 2024</div>
+                <ul>
+                    <li><strong>Mission :</strong> Prise en charge de la maintenance matérielle et logicielle pour clients professionnels et particuliers.</li>
+                    <li><strong>Actions :</strong> Diagnostic méthodique de pannes, remplacement de composants électroniques/PC, montage sur mesure et résolution d'incidents.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Compétences -->
+        <section id="competences">
+            <h3><span aria-hidden="true">🛠️</span> Compétences Techniques &amp; Outils</h3>
+
+            <div class="item">
+                <h4>Courants Faibles, Réseaux &amp; Maintenance</h4>
+                <p>Câblage structuré RJ-45, tirage de câble, adressage IP. Détection de pannes matérielles, analyse de composants, maintenance préventive et curative.</p>
+                <span class="tag">#RJ45</span>
+                <span class="tag">#Diagnostic</span>
+                <span class="tag">#Sécurité</span>
+            </div>
+
+            <div class="item">
+                <h4>Outils, Langues &amp; Soft Skills</h4>
+                <ul>
+                    <li><strong>Outils :</strong> Logiciels de diagnostic (Rufus, Ventoy), suite Microsoft Office, notions de Python.</li>
+                    <li><strong>Soft Skills :</strong> Rigueur &amp; méthode, analyse &amp; diagnostic, esprit d'équipe.</li>
+                    <li><strong>Langues :</strong> Français (langue maternelle), Anglais (technique - A2/B1).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Passions & Intérêts -->
+        <section id="passions">
+            <h3><span aria-hidden="true">🌍</span> Passions &amp; Centres d'Intérêt</h3>
+
+            <div class="item">
+                <h4><span aria-hidden="true">💻</span> Tech, Hardware &amp; Automatisation</h4>
+                <p>Passionné par l'optimisation matérielle et logicielle (configurations sur ASUS ROG Ally Z1 Extreme, Vivo X200 Pro Mini). Curiosité approfondie pour la création de workflows automatisés (n8n, scripts Python) et la gestion d'environnements virtualisés (Docker, WSL2).</p>
+                <span class="tag">#Hardware</span>
+                <span class="tag">#Automatisation</span>
+            </div>
+
+            <div class="item">
+                <h4><span aria-hidden="true">📈</span> Finance &amp; Investissement</h4>
+                <p>Étude active des marchés financiers (Forex, matières premières comme l'or) via l'approche Smart Money Concepts. Analyse d'indices boursiers et gestion de portefeuilles ETF (S&amp;P 500, MSCI World).</p>
+                <span class="tag">#Trading</span>
+                <span class="tag">#SMC</span>
+            </div>
+
+            <div class="item">
+                <h4><span aria-hidden="true">🏋️‍♂️</span> Sport &amp; Musculation</h4>
+                <p>Pratique régulière de la musculation en salle avec des routines structurées (Push-Pull-Legs, surcharge progressive), couplée à un suivi rigoureux de la nutrition et des macronutriments.</p>
+                <span class="tag">#Fitness</span>
+                <span class="tag">#Discipline</span>
+            </div>
+
+            <div class="item">
+                <h4><span aria-hidden="true">🎬</span> Cinéma, Animés &amp; Gaming</h4>
+                <p>Grand intérêt pour l'univers du jeu vidéo narratif et d'action (Ghost of Tsushima, Black Myth: Wukong), les animés (Jujutsu Kaisen, Dragon Ball Super) et la littérature axée sur le développement personnel ou les dystopies (Atomic Habits, 1984).</p>
+                <span class="tag">#Gaming</span>
+                <span class="tag">#CulturePop</span>
+            </div>
+
+            <div class="item">
+                <h4><span aria-hidden="true">✈️</span> Géopolitique &amp; Aéronautique</h4>
+                <p>Curiosité pour l'histoire militaire, les relations internationales et les avancées technologiques dans l'aviation.</p>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
